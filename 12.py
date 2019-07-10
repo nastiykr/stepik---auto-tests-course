@@ -15,9 +15,12 @@ option2.send_keys("Petrov")
 
 option3 = browser.find_element_by_name('email')
 option3.send_keys("Isdsdds@hnfjkdsm")
+option3 = browser.find_element_by_name('file')
 
 
+current_dir = os.path.abspath(os.path.dirname("C:\\"))
+file_path = os.path.join(current_dir, 'file.txt') 
+option3.send_keys(file_path)
 
-current_dir = os.path.abspath(os.path.dirname(__file__))    # получаем путь к директории текущего исполняемого файла 
-file_path = os.path.join(current_dir, 'file.txt')           # добавляем к этому пути имя файла 
-element.send_keys(file_path)
+option4 = browser.find_element_by_css_selector("button.btn")
+option4.click()
